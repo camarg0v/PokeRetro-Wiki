@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>PokéRetro Wiki</title>
-        <link rel="icon" href="midias/imagens/icon.png" type="image/png">
-    </head>
-    <body>
-        
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pokémon World</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="curiosidades.html">Curiosidades</a></li>
+                <li><a href="jogos.html">Jogos</a></li>
+                <li><a href="pokemons.html">Pokémons</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Bem-vindo ao Mundo Pokémon!</h2>
+            <p>Projeto da matéria de Web Design, feito com HTML e CSS. Feito para fãs de Pokémon, com jogos, curiosidades e Pokémon memoráveis.</p>
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTEhIVFRUVFRYVFxgYFxUYGBcVFxUXFxUXFxcYHSggGh0lHRcXITEhJSkrLi4uGiAzODMtNygtLisBCgoKDg0OGhAQGi0iHyUtLSstLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSstLS0tLS0tLS0tLf/AABEIALUBFgMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAADBAIFAAEGBwj/xAA5EAABAwIDBQYFBAEEAwEAAAABAAIRAyEEMUEFElFh8AZxgZGhsRMiwdHhBzJC8RQjUmJyFpKiFf/EABoBAAIDAQEAAAAAAAAAAAAAAAIDAAEEBQb/xAAqEQACAgIDAAAFAwUBAAAAAAAAAQIRAyEEEjETIkFRcQWBoTJCYbHBFP/aAAwDAQACEQMRAD8A7BlUC0m0l0Cd0AXtTbuiwLczErGMI/iILmtcJyDXS8M4NaSG2ziUuxxzI3r5mXCZjehzw27mvI5AcUzTflDgToJZoZDTuEwN55ceTVhNJJsWJh0jecMi59Rw+G0N4ZyT901eCWkGC+DcDfDdwnw4pL4rmEvptc4H5t0bsuuQ1w36oAMNm4iDoUWvjBRG8RIhjIBbDG3qcBvEwLRnGiqixttED5iTu3jIwGgNFpuSd4nvKrto9oKNAMAqD5nkuu19TcgvPyh1nFxEk6Fcltnta5xd8MkDcFPfMh26ZLiLndm0nOy4zHbda0n5t4xpxjiOft5Rf4Lr7nT47tK90Fm8wg728KjnXmcnW0Fha2S5rF7QkfM6eExkTpPHM+qoMRtl7v22GXOEg9xOZlGofcpyX0LqvtNt7z5x9kOnXLiBkDrnCrqVAnIK52bs4nNDOSii4ps6zYnZClVAc/FudkS1rNzwkk+i9H7M7OpYUbtFoa3Xi48XE3ceZXBbFlkQuuwWMMLjZcmST3LRr6RS0juqONadUwaoXJUK6foVimQ5coqjNLAvoW2Ipbyqi1WNCul8XS1GX1WLmQU12j6Fhl1dMScFAhGIUC1ctmxMGsWy1ZCqg7NLAFiwWurS3sjD18IWASRJ0nJHwGHBlzx8oHqnMTQa+7rz7KbWADd0yXYx8SMcvZLS8T/6YJZpONFM+o1zyG6mABPcmcfh2sgAkk+SZp4YNdIER9UHF4EPIJJsZEHUFV/5EoStW3/H4C+LtU9IQcwxMGEJwT22cWWta3jAKUcFz+ThWKVJ2acU3JWwDkJyM5CckD0DchuRHIblaLBuQyiOUCiICK2sKxEQk+pEb3CYIIMAQY3oJ+UbotnURGhzzuk2Mixcdd1wHzgZ7wy05oDZzsGtEh0RIaTDiGsJ/gTJPgkdubTp02w/4jN1ohwA+c7rhAbvWBl1zxNxr7A441tDbdKm1xnMSRLaRcC3dDWWJJAtyjy857Rdpy+z90MDi5rBGZkAzEmBDQeSp+0HaRz3ugy4/wDq0AQ1oGkAQueDXOMuJJTFD7g39hvFbUfUtk3gPqdUBtNMYfBlWlHBDgqlkUfAlBv0qGUDoExQwhV03DDgmGYbl1qkSzjFiFMHgp68Vd0KUeCnh8PbrROMw05ahY8mSzRGFDOFz65/ZX+BcqnBULePpZXOFprFkGlnQcrCi5V9EJpjktMXJFpRqJ5rgRCpKdfinKWKRdhEoE69At7kKFYNqBwhJ1qe6eSyZ8NfNHwPHN+MAWqJCIVEhZB6ZBY1skAao9DCufMRA1Ngm8NRay5Mu9AtOLiznTql9wJ5UrS9CvdA7h7IBrXU61RAAXWszRjoN8U9dynTfxQgZQ3uQ5MrgrLUUyt21XBe0cwfBEclMfR+aUxSPyhcrPP4j7GqKSSQN6E5FehOWcegblBym5QcrQQJygURyG5EQGVi05bRIgntTGNpM3i8scAA35TAAaQGFzQYduzabF0ryHtR2gdXqu3AAP2jdEBjQIaxg0AAF+9Pdsu0Dqr3MYS0OJLgCYAJkDv4mPxz1DDcl7WKS2zivekAw1BW2GoobMORorHD0YS8mQOEKC0qPgmqdO3Xop0GjhzTbaHDJYpTNMYgBTuE9QpZdZLbaXoj0me8d3BIlMaohWU4t3nxTGHpxHBbY2Y0+6NSb6JEpDKHMIPt6q0oDr0Vbh7Kxpfb6pEmU0PMC2+rH3QTwC5TtD2zZRcabPnc2zuAPAnVFjxyyPrFC20ts7A4gJmlXBXlFHt9UJE02xycSe7JdJsbtVTqWcd13A5HuKZk4mWCtoFTiz0HD1E78UEQVzeGxcixTtOseZ9kiMq0DKH1HnWK0gmop03SFlz4eu14HFg8ZiajGHcE3kjU9yQw+294SfFWpXIbWp/DruiwcA6O/P1T+Jlb+Rl9UdC3aQdqjf5sHvXKUDAkFOYXFzmt1UD1OkpYrmtirJVNSxIBuU5SxghZOVJuNFxiMYkg+CyiLFJ/FnW/QTWFfKwhNUiD0FyPUCA5KHpgyoFEKGVaCBuQyiOQ3IiAysWOWIiHhODoE/Mczck6lWLKEfhFw9IjTyumG0jp5afhesnktnLjCjKVEcPt4otOlDhw+n3RaFI6WTjKeUrPKY1RI/48G2X0TLKcX80QU9PJNU6dlmlMdGJBjOuY0RG0kZtHh1GXcj0sOeCS5DUgIBTbBaeu5Sbg3HTgrPBbPjMWMTyOiTKaLFqLMvJP0m265lap0I7wYPnn3JssvHOEu7BYrjnblJ7h/Frj5BeKdmtjP2hWcXuc2nvAv3Gybmd1gNpjU8civecZh9+m5n+5pb5ghVXZDDswGAa5u6HsbDmtN3VZh76js/3SA0R+3lbs/pbSjKvdGDktuiu2P2Y2bQDmnBMqC3zVS5zuV5t4AJXHdlcNV/1KANHdMbr3EsggxuVHSWXIEOJblYKqxHaCqzE1KFbdANmwDIfuggPMmRcgwl8R2yc3DvpgSQ14dvWEvBbvAcRbxC6TTemZ0+u0OYDHvwNUU8Q/5LZiN0E2c05ObF4GlwvQKbyvPtlGq/CYYGXuEODDcRBiQf2g2tdtzku77MbMfTw1Om+CWt8AOA5Lj8rHF/Mvbr8/5N19fx/odvxUadXdPJNnDjSyHUpLG4apl9kMCoIXJdpa4NQQcmx6roKbiydQuP22/wD1HHmkYcLhksYnZqjVIRmVNclXtrWR6dQEeXut5YwcTzTGHxJ49SqivVjTx8p77qbK9wRlPskZIWGjoKWJkx/Vj+Vb4A+653BuyJ4rocAVhyqiS8Gq4ulnpuulXrM/SY3oEUMohQyohgNyG5EchlEiwblixy2iIeWsw54pinQ4i/Ir0D/xNv8Au9FA9kh/u8l2nyUY0o/c4ynh4zy8Pun6ODJGVl1dHsyGxdWWH2WG8PRJnyPsMVHGUtnPnu9eYVvgNiuNyLfTiuqp4Ro0TVOkBos7yyZHNLwoKOxg1N//AJwEWj7yFbbgWheIjL2QWyviFZ/iADuv5FG3BAPfp3WThoZcvckILqcC2vp3eCGSaKU7FWUpUjR1KZpUbpptGyWmwpTSK2pTgLndo4YUq7K+7LC75sobUn5XPYbOa4wCf455EkdxRwe9mAmG4FlwWgjmJC6fE+JGXeJnnkj4zwbb/Z6tVxVStTcwfEql24d4brjfdBJvee66tth/p1UrVPiVWPDCbyNxo4ndf8zxPEAcjmvZ6eEpMu2m1sCBDQLWECNLDyCl8XgV03yJ+WZ24f2x/llXs3s5RoizZdaSZ0AAt4BO1KY4oj3oDisWSaCVv0SxTT/GT1zVBVxlXf3Rl78eGXWq6Z+uV1RY+iGy43tcDhzJSvTXgkvGjKeLBtHvfnBvHeFTbewYLS9pRm1iSbADUCSZ5kdDkmKFcEf8esgLIf6R0sdbRxLZBvPcmKQ5W4+oVltjCXJFhxzPhx9EhSbHVyE2wTK7Jt4jzW8MyIjWCe5EYfSw1m1kzRpR1ol5HotDGEERr97q9wFTJUjW36yVrs7TwWDLsN+FzVySz007JKuWaQvGBKg5TcoOQocDKGUQobkaIDcsWFYrLLpz0KrVjr7IeLMLke1fatuHp2vUdk0ac3Hrgujjxyyy6owKkrOwxeLZSZvVHtZqS4xAFybrn3fqBgQ7dFQv5htvPivDds7YrV3l9So5znXzMAaDkBw+6TwWEq1nhlJj6jzk1jS5x7gLrsQ/S4V8zM75G/D6d2VtilXE0zKtwvnvB4jauyXNfWo1BTsS153mgGIBc0n4buR8ivceym3aOOoNrUTYiHNObXAXae786rncrgSxbW0MWVSLWFJrJU6dJGa2PJZoQf1JKX2BfCPot/49uskyAtihlnmtHwe2krF9yvLITOGpzmsxrI1DRmTa8Ln8d2ip0GueTIaC5xJhoAElIhx5Ry1VoYm5rR1m7CWrVSMo8s1Xdk9rnF4SnXLdzf3yBJMtDyGm/EAFOOEcevVdDNcaS0JUabTBVXHU9d6E958vRRc9skzPcfdAdiOAj1PfZY3Icohn1Y1PHWSpCrOf2+qqq1a+Z9kSlV6H3ISe+6GvHos97jHmlcbTBF792Q87BaNUjTzN/RCfWGRPoB5p0ZpApNM5/Ft0kxlFza1iR396EzkDHMR6fdWWPpA3Dj4Ae5IAVfUaNHHxj6Z6q5eHQhJNAtqGWc/H6XVA2sG2I1+qvMb+zXzIXM4h8FFjVoQ9MfoPvI66jNWuHAj3Pfqucw9aSINvXT1XQYVxOaHMqRaHqdNPYMXStJOYcrBJhPwtT+1LuR2iQgPSJAYwTkNyI5QcgQ0EUNyK5CcjRAbli2VpWEM7Qed0gGLZ8OupXi+3hUr1ngD5WbzswPlbmbm9xp+V7LtOiS2AMvC3NecNoM+PWBEk0myRH7HtIIAFyJvacsl3+E+vaRh69qiLbJ2fhWUqDDhWYmvVHxqjjvGC4bzaTd0izWkTzJXT9nu09DCsNJmHpsJcHQwBkuGjiLuHfwXlmMxFfD1SzeILHEtJGYuA4d6r62Kc47znEnjPsu1V7s57Vaa2eqdr8ZjqBZi6OKaWV2uFWmG03FjiTAc1zTIc058kb9L8W2gQ69P48BzQHbhfM03sEQJBLXCw/adCuD7PbKxOLcIbVLBm8zBA/iHGx+i9j2F2YgNfXA+SzGgyG5S7kTAOsG+eWTlZo440/wBzRhx2nJ/sduyqJk5QiisFVuqcMlOm45rzb5EnL5RrxIsDiFIYkpcNsD1C1qb2HX3RxllTuxbiir27hMVWY4UqzWG8OLN7dvaG/tnmZXMbZ7MYusGUZaWub8OvUOe6f3ObTaI3s+V13DqkCx66CSxeIsGh192RzFwtceVKK2rGRcvEWeFw7KFFlKmA1lNoY0DQAQAlMdWt+FwG0f1QwtJzqZqFzmGJY0ubpLSZgxy4edVX/VPCmTFQ2yDBfjqmTx58u+jBioRe2j0VuIf38o+iRxGMjS68m2p+qVR28KFLd4Oe6TyO6BHgu12DiXVaTKjjLntBPefZLy8XJjinMdjnCT+Uu/jE8vJbo1oKE1acsDWx5Z08RK2+rOZVax6I9yOLYDiGr0Z1H1VK+lDovHgIVmK2hPXihuOufknIKE3EqdtOinmYHWv0XIudJJ8R/Wi6TtHXAbExPWYXLk31697LVhXygt7HcI73ur7AvyzVBhyforbBOSsysOJ0VGpIT2GVXhTkrbChc6ei2Wjf2oDkcZID0mXgEARQyiOQygQ4G5DciOQ3BEiA3LFty0rIW1bDhzS3LeEGM7i91w3azsu5lSnUotc8MZuBm654dH7A5oMnM/cSV6LTppttMHNeh49xZy5ZDy/D9iX4kTiKIY2bbx3nxAuGtyvOo0kcLrY36bYGj83wA93Gr88RwabBd0VAhMnkcVUS5ZXN3ITp4VjAAGgAC1slGsCmHKBXIzLt6OgxYDL0TtLIJWo/dugf5VzOnshxpIKSbLYu18IQMRUAMePpN1T1NrXLhEDxkpLF7epNY4udEA8ZIHvcJ/Xt4B8Nr0tzihd0wJPjAFvMjyXln6h9vn03PwtCA7dLalSbtkRusjIxroq7tF+pgcC3CMcJBG++BHNoEye/gF5tWqFzi5xJJMknMk5krqcPgNPtlX7Cs2ZJVBkSVkrS2AuwYjbM17Z2SM4aieLAvF6bYuva+zlHdoUmn+LACuZ+pNdF+TbxFtnQA8VFxWNyUCVwKNxget/EIQtVIFWkQIKixxQyoVHwCUxAlB2hq9Z+ipKTAetJT21cXvPN4sgUhrly+62RVRKQemw/myscG26DSaJVjQbCzZJDUWeDarjChVGFcrrBaLBkKl4WDhZLOTFQ2QHJWT2gcYJyE5FchOSxoNyG5FKG5EWDKxYViJEOophGLoCECkto4mLDLVej7KCOPCDnKjKmP+busLo1HFB2Ry5QPXPMLnqpl0zbmTYfxDWjPjOnkpNrFsC4J8OJv4yVlc2dF8ZVr06TeEwNPqhvJmPVL7NxLXAxxknja+fVkd74kn+1mmhNdXQpijpPXJUtd8E9daK4r2uc4/ICo8Y4zfU9eyCqY6IjUeSI5JCph59/RPPHXqtt18R6BHF0GzitvdjqdYl1OKdTu+Vx/wCUZf8AYeS882hs+pReWVWFrueRHEHIjmF7y6iCR1p+Cl8XsplVu5UYHt4ETflz7l0+Pz5Q1PaMmXjxltaZ4JCmwHgvVMX+ndBxlhezlMj/AOgo0uwTWn5iTysPZbnzsVaELjS+pxHZjZLq9YW+VpBcdOTetAvZMJRgAckvszZLKIhgA5Qnx13rlczk/FdI14sfRE1EtWyViw0OBhqkFJRhWiEgEDFGBGqP7Kn2pXItFkyKBKXEMl1wOaJh6X9dZqF9bibJnCm9wnyei0hhjYKdpOS1FqaY3kVmmEixwgV7gWqjwXer/AlZJf1Azeg9UITkaqEFyRk9Lh4CchlEchlAMIFCcilDciIDK0tlYrIdLUfCo3Vd50+XcfqrbFH5SqBtS54zbkNB9V3cr2ZOLDTZuoc3EiBMzGU6oBr8DM8rBpysc5W6pBsQCLnx/sJZ1QB27BJN4ta2Z8hx9CkM6MIjuDxpGcm87otMCwzt3eivmOloJGd8/Qfdchh8RLiZmOAgXNgO/Pwnv6DZ1SW7rsxmBlBndEc/t4RIz8nHW0FxfEz+c1QYr93crzF1oEnh7n8FUWKN+f00CVJKxUAJHXNDH1CIdOYv14qICEYEb9fqjMqQgs67+oWz138vJSyhtzRmOuHXNCMHy/ueIiFBlW/n9VLf1jw7ldlUYeuuslojVS3uutZUS71VEIgKULTQplEiEYWALZQqhU8IZWda2aoMW870EdfRW73yla7AVIy2FRWfDujtpaiEw2lKygLkFOvRRvDjlCZphCYyM/om6CRJljuDpq/wTAqfCK4wrkj62Lmw1YpdyNVMoTlnyO5BQ0gTkNyI5DKWMBuQyiuQyiLBFYtkLFZC+rQRCocS3dceuoHur2oEhi6G8u3lsx8eXVlM83mJv/QAyEdcUrWeIcRdxzOkxIk62TGJoG8mBr4ZJOowgR/eeXPX8pB1Y0/CGEqcLkkAE67xEnkNeFtFcbHq7tN8XMuM8TAgnXUR/wBSqPB4V2Z0mBfgRPPM37+avNnfK0N1bvDhJ08i5w8EyxfJaoNSMkNPPPlJSNWlaRoY9/wmS628NIHnIPul4+Xu+sJT8MaAbqwNz7itqTeHelhkYWKfXXWiifrKohHdn2WyOC0DqpBWQxZCkttCuiiYyWpUS5RaURVEnnVLVDKlVcoMCD1hoH7oDwt4p1/rqo0hKZGNENUTop1RqFhpwZ0PuiIyjdMIjFpjYR2tBSZIsewiusO2ypcOIVzhXFKUb0KmEcEMo70FyzZI0wosC5DciOQyljQZQ3IhQ3KyECsWFYiIXzkpUNvCevNYsXeyHOgJVqYdn3deSCaAPh+PusWLKzVGTo22gB5IDnXgWgx5HNYsUJbbBB9iOs2n6qD3ex9FtYhZaAOt1y/CwnrzWliFhk2ulaBWLFCGuvRYXdeK0sVoomCtkrFihTIg5rRK0sVFkN65UostrEUSMrq5krMMsWIy0Ohs2US2CFixWCEd+2VptisWJcy0O4aornBvWLEuPoGQfI5pdzVixKzpA42LvKG4rFiyGhAyVBxWLFaLBlYsWKyH/9k=" alt="Pikachu sorrindo">
+        </section>
+
+        <section class="video">
+            <h3>Assista a um trecho clássico</h3>
+            <video controls width="320">
+                <source src="C:\Users\Pichau\Documents\GitHub\PokeRetro-Wiki\midias\videos\Ash meets Ho Oh - friend (360p, h264, youtube).mp4" type="video/mp4">
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito com ❤ por fãs de Pokémon — 2025</p>
+    </footer>
+</body>
 </html>
