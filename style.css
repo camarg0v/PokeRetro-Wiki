@@ -1,54 +1,94 @@
-/* main */
+/* ====== ESTILO GERAL ====== */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: linear-gradient(to bottom, #f0f0f0, #ffffff);
-  color: #ffffff;
+  padding: 0;
+  background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+  color: #222;
 }
 
+/* ====== CABEÇALHO ====== */
 header {
-  background-color: #960404;
-  color: rgb(255, 255, 255);
-  padding: 15px;
+  background-color: #b00000;
+  color: #fff;
   text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+/* ====== NAVEGAÇÃO ====== */
 nav ul {
   list-style: none;
+  margin: 10px 0 0;
   padding: 0;
 }
 
 nav li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 15px;
 }
-main
-{
-    color: #000000;
-    text-align: center;
-}
+
 nav a {
-  color: rgb(0, 0, 0);
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 4px;
 }
 
-nav a:hover {
-  color: #000000;
+nav a:hover,
+nav a.ativo {
+  color: #ffeb3b;
+  border-bottom: 2px solid #ffeb3b;
 }
 
-footer {
-  background-color: #960404;
-  color: white;
+/* ====== CONTEÚDO PRINCIPAL ====== */
+main {
   text-align: center;
-  padding: 10px;
-}
-.ativo {
-    text-decoration: underline;
-    color: #ffeb3b;
+  padding: 40px 20px;
 }
 
-/* Pokedex */ 
+.intro img {
+  border-radius: 12px;
+  margin: 20px 0;
+  max-width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.intro img:hover {
+  transform: scale(1.05);
+}
+
+/* ====== VÍDEO ====== */
+.video h3 {
+  margin-top: 40px;
+  color: #b00000;
+}
+
+.video video {
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 3px solid #b00000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* ====== RODAPÉ ====== */
+footer {
+  background-color: #b00000;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+/* ====== POKÉDEX ====== */
 .pokedex-controls {
   text-align: center;
   margin: 20px auto;
@@ -57,10 +97,11 @@ footer {
 #searchInput {
   width: 260px;
   padding: 10px;
-  border: 2px solid #2a75bb;
+  border: 2px solid #b00000;
   border-radius: 8px;
   font-size: 16px;
   outline: none;
+  transition: border 0.3s;
 }
 
 #searchInput:focus {
@@ -83,7 +124,7 @@ footer {
   background-color: #cc0000;
 }
 
-/* Loading Pokébola */
+/* ====== POKÉBOLA DE LOADING ====== */
 .loading {
   display: none;
   flex-direction: column;
@@ -120,7 +161,7 @@ footer {
   to { transform: rotate(360deg); }
 }
 
-/* Pokédex Grid */
+/* ====== GRID DA POKÉDEX ====== */
 .pokedex {
   display: flex;
   flex-wrap: wrap;
@@ -136,11 +177,12 @@ footer {
   width: 180px;
   text-align: center;
   padding: 15px;
-  transition: 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .pokemon:hover {
   transform: scale(1.07);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
 .pokemon img {
@@ -151,7 +193,7 @@ footer {
 
 .pokemon h3 {
   margin: 10px 0 5px 0;
-  color: #2a75bb;
+  color: #b00000;
 }
 
 .pokemon p {
@@ -160,7 +202,7 @@ footer {
   color: #444;
 }
 
-/* Paginação */
+/* ====== PAGINAÇÃO ====== */
 .pagination {
   display: flex;
   justify-content: center;
@@ -170,7 +212,7 @@ footer {
 }
 
 .pagination button {
-  background-color: #2a75bb;
+  background-color: #b00000;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -182,13 +224,10 @@ footer {
 
 .pagination button:hover {
   background-color: #ffcc00;
-  color: #2a75bb;
+  color: #b00000;
 }
 
 #pageInfo {
   font-weight: bold;
-}
-.ativo {
-    text-decoration: underline;
-    color: #ffeb3b;
+  color: #222;
 }
