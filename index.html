@@ -1,17 +1,25 @@
 <!DOCTYPE html>
+<!-- Declaração do tipo de documento (HTML5) -->
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <!-- Configuração de codificação de caracteres e responsividade -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokémon World</title>
+
+  <!-- Fonte importada do Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Link para o arquivo de estilos CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Cabeçalho da página (título e menu de navegação) -->
   <header>
     <h1>Pokémon World</h1>
     <nav>
       <ul>
+        <!-- Links principais do site -->
         <li><a href="index.html" class="ativo">Início</a></li>
         <li><a href="pokedex.html">Pokédex</a></li>
         <li><a href="regioes.html">Regiões</a></li>
@@ -20,28 +28,35 @@
     </nav>
   </header>
 
-  <!-- Seção Hero -->
+  <!-- Seção principal de destaque (hero section) -->
   <section class="hero">
     <div class="hero-text">
+      <!-- Título e texto introdutório -->
       <h2>Bem-vindo ao Mundo Pokémon!</h2>
       <p>Descubra criaturas incríveis, explore todas as regiões e torne-se um verdadeiro Mestre Pokémon!</p>
+
+      <!-- Botão que leva à página da Pokédex -->
       <a href="pokedex.html" class="btn-hero">Explorar Pokédex</a>
     </div>
-    <img src="midias/imagens/pikachu.png">
+
+    <!-- Imagem ilustrativa principal -->
+    <img src="midias/imagens/pikachu.png" alt="Imagem do Pikachu">
   </section>
 
-  <!-- Cards de destaque -->
+  <!-- Seção com cards de destaque (links rápidos) -->
   <section class="cards">
     <div class="card">
       <img src="midias/imagens/pokedex.png" alt="Ícone Pokédex">
       <h3>Pokédex</h3>
       <p>Conheça todos os Pokémon e suas evoluções detalhadas.</p>
     </div>
+
     <div class="card">
       <img src="midias/imagens/mapa.png" alt="Ícone Regiões">
       <h3>Regiões</h3>
       <p>Explore as diferentes regiões!</p>
     </div>
+
     <div class="card">
       <img src="midias/imagens/treinador.png" alt="Ícone Treinadores">
       <h3>Treinadores</h3>
@@ -49,15 +64,19 @@
     </div>
   </section>
 
-  <!-- Seção de vídeo (corrigido o caminho) -->
+  <!-- Seção com vídeo ilustrativo -->
   <section class="video">
     <h3>Assista à jornada lendária!</h3>
+
+    <!-- Elemento de vídeo com controles -->
     <video controls width="600">
       <source src="midias/videos/ash_hooh.mp4" type="video/mp4">
+      <!-- Texto alternativo caso o navegador não suporte vídeo -->
       Seu navegador não suporta vídeos HTML5.
     </video>
   </section>
 
+  <!-- Rodapé do site -->
   <footer>
     <p>© 2025 Pokémon World - Projeto Estudantil</p>
   </footer>

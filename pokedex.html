@@ -1,17 +1,26 @@
 <!DOCTYPE html>
+<!-- Declaração do tipo de documento HTML5 -->
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <!-- Configuração de codificação e responsividade -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Pokémon World</title>
+
+  <!-- Fonte importada do Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Link para o arquivo de estilos -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Cabeçalho da página, com título e menu de navegação -->
   <header>
     <h1>Pokémon World</h1>
     <nav>
       <ul>
+        <!-- Menu de navegação principal -->
         <li><a href="index.html">Início</a></li>
         <li><a href="pokedex.html" class="ativo">Pokédex</a></li>
         <li><a href="regioes.html">Regiões</a></li>
@@ -20,19 +29,29 @@
     </nav>
   </header>
 
+  <!-- Conteúdo principal da página -->
   <main>
+
+    <!-- Área de controle da Pokédex (busca e botão de limpar cache) -->
     <div class="pokedex-controls">
+      <!-- Campo de busca de Pokémon -->
       <input type="text" id="searchInput" placeholder="🔍 Buscar Pokémon pelo nome...">
+
+      <!-- Botão para limpar o cache armazenado -->
       <button id="clearCacheBtn" class="btn-clear">🧹 Limpar cache da Pokédex</button>
     </div>
 
+    <!-- Tela de carregamento (mostrada enquanto os dados são buscados) -->
     <div id="loading" class="loading">
+      <!-- Animação de pokébola girando -->
       <div class="pokeball"></div>
       <p>Carregando Pokémons...</p>
     </div>
 
+    <!-- Área onde os cards dos Pokémon serão exibidos dinamicamente -->
     <div id="pokedex" class="pokedex"></div>
 
+    <!-- Controles de paginação (anterior e próximo) -->
     <div class="pagination">
       <button id="prevPage">⟨ Anterior</button>
       <span id="pageInfo"></span>
@@ -40,10 +59,12 @@
     </div>
   </main>
 
+  <!-- Rodapé da página -->
   <footer>
     <p>© 2025 Pokémon World - Projeto Estudantil</p>
   </footer>
 
+  <!-- Script JavaScript que faz o carregamento e interação da Pokédex -->
   <script src="script.js"></script>
 </body>
 </html>

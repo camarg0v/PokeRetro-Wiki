@@ -1,13 +1,17 @@
+/* ====== VARIÁVEIS DE CORES ======
+   Paleta principal baseada no tema Pokémon.
+   Facilita alterar cores globais rapidamente. */
 :root {
-  --vermelho-poke: #e53935;
-  --amarelo-poke: #fdd835;
-  --cinza-claro: #f4f4f4;
-  --cinza-escuro: #333;
-  --branco: #fff;
-  --azul-poke: #2a75bb;
+  --vermelho-poke: #e53935;   /* Vermelho clássico Pokémon */
+  --amarelo-poke: #fdd835;   /* Amarelo das Pokébolas / Pikachu */
+  --cinza-claro: #f4f4f4;    /* Fundo suave */
+  --cinza-escuro: #333;      /* Texto principal */
+  --branco: #fff;            /* Branco neutro */
+  --azul-poke: #2a75bb;      /* Azul da franquia Pokémon */
 }
 
-/* ====== ESTILO GERAL ====== */
+/* ====== ESTILO GERAL ======
+   Define a base visual do site: tipografia, cores e espaçamento padrão. */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -16,7 +20,8 @@ body {
   color: var(--cinza-escuro);
 }
 
-/* ====== CABEÇALHO ====== */
+/* ====== CABEÇALHO ======
+   Área superior fixa com título e menu. */
 header {
   background-color: var(--vermelho-poke);
   color: var(--branco);
@@ -31,7 +36,8 @@ header h1 {
   letter-spacing: 1px;
 }
 
-/* ====== NAVEGAÇÃO ====== */
+/* ====== NAVEGAÇÃO ======
+   Menu horizontal com links estilizados. */
 nav ul {
   list-style: none;
   margin: 10px 0 0;
@@ -52,18 +58,21 @@ nav a {
   padding-bottom: 4px;
 }
 
+/* Efeito hover e item ativo no menu */
 nav a:hover,
 nav a.ativo {
   color: var(--amarelo-poke);
   border-bottom: 2px solid var(--amarelo-poke);
 }
 
+/* Classe adicional para destacar a página atual */
 .ativo {
   text-decoration: underline;
   color: #ffeb3b;
 }
 
-/* ====== HERO SECTION ====== */
+/* ====== HERO SECTION ======
+   Seção inicial de destaque com título, texto e imagem. */
 .hero {
   display: flex;
   justify-content: center;
@@ -71,9 +80,10 @@ nav a.ativo {
   gap: 40px;
   padding: 60px 20px;
   background: linear-gradient(120deg, #fff 0%, #ffeaea 100%);
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permite adaptar no mobile */
 }
 
+/* Texto principal da seção hero */
 .hero-text {
   max-width: 500px;
   text-align: left;
@@ -92,6 +102,7 @@ nav a.ativo {
   margin-bottom: 25px;
 }
 
+/* Botão de chamada (CTA) da hero section */
 .btn-hero {
   background-color: var(--vermelho-poke);
   color: var(--branco);
@@ -108,16 +119,19 @@ nav a.ativo {
   transform: translateY(-2px);
 }
 
+/* Imagem principal da hero */
 .hero img {
   max-width: 250px;
 }
 
+/* Animação simples de "flutuar" usada em imagens */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
 
-/* ====== CARDS ====== */
+/* ====== CARDS ======
+   Estilo dos cartões (líderes, elite, campeões, etc). */
 .cards {
   display: flex;
   justify-content: center;
@@ -136,6 +150,7 @@ nav a.ativo {
   transition: 0.3s;
 }
 
+/* Efeito ao passar o mouse */
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
@@ -151,7 +166,8 @@ nav a.ativo {
   margin-bottom: 10px;
 }
 
-/* ====== VÍDEO ====== */
+/* ====== VÍDEO ======
+   Centraliza vídeos e dá borda temática. */
 .video {
   text-align: center;
   margin: 60px 0;
@@ -169,8 +185,10 @@ nav a.ativo {
   max-width: 90%;
 }
 
-/* ====== POKEDEX ====== */
-/* Controls */
+/* ====== POKEDEX ======
+   Layout da página da Pokédex com filtros, cards e loading. */
+
+/* Campo de busca e botões */
 .pokedex-controls {
   text-align: center;
   margin: 20px auto;
@@ -191,6 +209,7 @@ nav a.ativo {
   border-color: #ffcc00;
 }
 
+/* Botão para limpar busca */
 .btn-clear {
   background-color: #ff4444;
   color: var(--branco);
@@ -207,9 +226,10 @@ nav a.ativo {
   background-color: #cc0000;
 }
 
-/* Loading Pokébola */
+/* ====== ANIMAÇÃO DE CARREGAMENTO ======
+   Pokébola girando enquanto os dados carregam. */
 .loading {
-  display: none; /* add .active to show */
+  display: none; /* add .active para mostrar */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -243,12 +263,14 @@ nav a.ativo {
   border-radius: 50%;
 }
 
+/* Gira a Pokébola */
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-/* Grid */
+/* ====== GRID DA POKEDEX ======
+   Estrutura de exibição dos Pokémon. */
 .pokedex {
   display: flex;
   flex-wrap: wrap;
@@ -267,6 +289,7 @@ nav a.ativo {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Zoom leve ao passar o mouse */
 .pokemon:hover {
   transform: scale(1.07);
   box-shadow: 0 8px 18px rgba(0,0,0,0.18);
@@ -289,7 +312,8 @@ nav a.ativo {
   color: #444;
 }
 
-/* ====== PAGINAÇÃO ====== */
+/* ====== PAGINAÇÃO ======
+   Botões para navegar entre páginas da Pokédex. */
 .pagination {
   display: flex;
   justify-content: center;
@@ -318,7 +342,8 @@ nav a.ativo {
   font-weight: bold;
 }
 
-/* ====== RODAPÉ ====== */
+/* ====== RODAPÉ ======
+   Parte inferior com créditos e cor temática. */
 footer {
   background-color: var(--vermelho-poke);
   color: var(--branco);
