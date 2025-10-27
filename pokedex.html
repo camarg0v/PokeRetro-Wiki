@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex - Primeira Geração</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pokédex - Primeira Geração</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="pokemons.html">Pokémons</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="pokedex-controls">
+      <input type="text" id="searchInput" placeholder="🔍 Buscar Pokémon pelo nome...">
+      <button id="clearCacheBtn" class="btn-clear">🧹 Limpar cache da Pokédex</button>
+    </div>
+
+    <div id="loading" class="loading">
+      <div class="pokeball"></div>
+      <p>Carregando Pokémons...</p>
+    </div>
+
+    <div id="pokedex" class="pokedex"></div>
+
+    <div class="pagination">
+      <button id="prevPage">⟨ Anterior</button>
+      <span id="pageInfo"></span>
+      <button id="nextPage">Próximo ⟩</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>Feito com ❤ por fãs de Pokémon — 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
