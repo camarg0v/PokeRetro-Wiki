@@ -48,6 +48,10 @@ footer {
 @media (max-width: 600px) {
     nav li {
         display: block;
-        margin: 5px 0;
-    }
+        margin: 5px 0;
+    }
+}
+.ativo {
+    text-decoration: underline;
+    color: #ffeb3b;
 }
