@@ -353,50 +353,53 @@ footer {
   margin-top: 40px;
 }
 
+/* =====================================================
+  ESTILO PADRÃO (PÁGINA "SOBRE O PROJETO")
+  Este é o estilo "retro" de caixa preta.
+=====================================================
+*/
+
+/* Esta é a caixa principal que conterá o conteúdo */
 .content-box {
-    background-color: #fff; /* Fundo branco, igual aos containers do site */
+    background-color: #fff; /* Fundo branco */
     border: 3px solid #000; /* Borda preta sólida e grossa */
-    padding: 20px;
+    padding: 20px 25px;
     width: 90%;
     max-width: 800px; /* Limite de largura para legibilidade */
     margin: 25px auto; /* Centraliza a caixa na 'main' */
-    
-    /* Importante para o visual retro: sem sombras ou bordas arredondadas */
     box-shadow: none;
     border-radius: 0;
 }
 
-/* Estiliza os títulos principais dentro das caixas 
-  (ex: "Sobre o Projeto" e "Regiões do Mundo Pokémon")
-*/
+/* Estiliza os títulos principais (ex: "Sobre o Projeto") */
 .content-box h2 {
-    font-size: 1.8rem; /* Tamanho da fonte (ajuste se necessário) */
+    font-size: 1.8rem;
     text-align: left;
     margin-top: 0;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    /* Linha inferior para separar o título, como no site de referência */
+    /* Linha inferior para separar o título */
     border-bottom: 3px solid #000; 
 }
 
-/* Estiliza os subtítulos (ex: "Tecnologias Utilizadas" ou "Kanto (Geração I)") */
+/* Estiliza os subtítulos (ex: "Tecnologias Utilizadas") */
 .content-box h3 {
     font-size: 1.4rem;
-    color: #333; /* Um pouco mais suave que o preto total */
+    color: #333;
     margin-top: 30px;
     margin-bottom: 10px;
 }
 
 /* Estiliza os parágrafos de texto */
 .content-box p {
-    font-size: 1rem; /* Garante que a fonte pixelada tenha um tamanho legível */
-    line-height: 1.7; /* Espaçamento entre linhas para facilitar a leitura */
+    font-size: 1rem;
+    line-height: 1.7;
     color: #222;
 }
 
-/* Estiliza a lista de "Tecnologias Utilizadas" na página do projeto */
+/* Estiliza a lista de "Tecnologias Utilizadas" */
 .content-box ul {
-    list-style-type: square; /* Marcadores quadrados, bem retro! */
+    list-style-type: square; /* Marcadores quadrados */
     padding-left: 30px;
     margin-top: 15px;
 }
@@ -408,42 +411,45 @@ footer {
     line-height: 1.6;
 }
 
-/* Estilos específicos para a página de Regiões (regioes.html)
+
+/* ==============================================================
+   ESTILO DA PÁGINA DE REGIÕES (MODERNO, COM CARDS)
+   Sobrescreve o .content-box quando ele contém .region-info
+==============================================================
 */
 
-/* Estiliza cada <article class="region-info">
-  para separar as diferentes regiões.
-*/
-/* Usamos :has() para aplicar estilos de grid AO .content-box
+/* Usa :has() para aplicar estilos de grid AO .content-box
   SOMENTE SE ele contiver um item .region-info.
   Isso faz com que a página 'projeto.html' NÃO seja afetada.
 */
 .content-box:has(.region-info) {
-    /* Remove o estilo de "caixa única" retro */
+    /* 1. Reseta o estilo da caixa retro */
     background-color: transparent;
     border: none;
     box-shadow: none;
     padding: 0;
     
-    /* Define o layout de grid para os cards */
+    /* 2. Define o layout de grid para os cards */
     display: grid;
-    /* Cria colunas responsivas: no mínimo 280px, 
-       mas se ajustam para preencher o espaço */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Cria colunas responsivas: no mínimo 280px,
+       e no máximo 320px, para não esticar demais. */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
     gap: 25px; /* Espaço entre os cards */
     max-width: 1100px; /* Permite mais espaço para o grid */
+
+    /* 3. Centraliza os cards no container
+       (resolve o card "órfão" na última linha) */
+    justify-content: center;
 }
 
-/* Faz o título principal (H2) e o parágrafo de introdução
+/* Faz o título H2 e o primeiro parágrafo
    ocuparem toda a largura do grid, ANTES dos cards.
 */
 .content-box:has(.region-info) h2,
 .content-box:has(.region-info) > p:first-of-type {
-    grid-column: 1 / -1;
-    /* Mantém o estilo do título, mas removemos a borda 
-       para combinar com o novo layout */
-    border-bottom: 3px solid #ccc; 
+    grid-column: 1 / -1; /* Ocupa 100% da largura */
     text-align: center;
+    border-bottom: 3px solid #ccc; /* Borda mais suave */
 }
 
 .content-box:has(.region-info) > p:first-of-type {
@@ -451,28 +457,25 @@ footer {
     font-size: 1.1rem;
     color: #555;
     margin-bottom: 15px;
-    border-bottom: none;
+    border-bottom: none; /* Remove a borda do parágrafo */
 }
 
 
 /* Estiliza CADA <article class="region-info">
-  para parecer um "card" moderno da sua screenshot.
+  para parecer um "card" moderno.
 */
 .region-info {
-    /* Remove os estilos retro anteriores */
-    margin-top: 0;
-    padding-top: 0;
-    border-top: none;
-
-    /* Adiciona os novos estilos de card */
     background-color: #fff;
     border: 1px solid #f0f0f0;
     border-radius: 12px; /* Cantos arredondados */
-    padding: 25px 20px;
+    /* Padding é zero para a imagem colar no topo */
+    padding: 0;
     text-align: center;
     /* Sombra suave, como na sua screenshot */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    /* Garante que a imagem com cantos arredondados fique contida */
+    overflow: hidden;
 }
 
 .region-info:hover {
@@ -480,20 +483,31 @@ footer {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Estiliza o TÍTULO do card (Kanto, Johto, etc.)
-  para ficar parecido com o da screenshot (vermelho).
-*/
-.region-info h3 {
+/* Estiliza a imagem que vai no topo do card */
+.region-info img {
+    width: 100%;
+    height: 160px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    display: block; /* Remove qualquer espaço extra abaixo da imagem */
+}
+
+/* Este é o <div> que contém o texto (H3 e P) dentro do card */
+.region-content {
+    padding: 25px 20px;
+}
+
+/* Estiliza o TÍTULO do card (Kanto, Johto, etc.) */
+.region-content h3 {
     margin-top: 0;
     margin-bottom: 15px;
     color: #E3350D; /* Cor vermelha "Pokémon" */
-    font-size: 1.4rem; /* Ajuste de fonte */
-    /* (Se você usar a fonte pixelada, pode ficar diferente) */
+    font-size: 1.4rem;
 }
 
 /* Estiliza o PARÁGRAFO de descrição dentro do card.
+   (Mais específico que o .content-box p padrão)
 */
-.content-box .region-info p {
+.content-box .region-content p {
     font-size: 0.95rem;
     line-height: 1.6;
     color: #333; /* Cor de texto padrão para o card */
