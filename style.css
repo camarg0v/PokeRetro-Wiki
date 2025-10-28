@@ -359,7 +359,9 @@ footer {
 =====================================================
 */
 
-/* Esta é a caixa principal que conterá o conteúdo */
+/* Esta é a caixa principal que conterá o conteúdo 
+  em ambas as páginas (projeto.html e regioes.html).
+*/
 .content-box {
     background-color: #fff; /* Fundo branco */
     border: 3px solid #000; /* Borda preta sólida e grossa */
@@ -378,7 +380,6 @@ footer {
     margin-top: 0;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    /* Linha inferior para separar o título */
     border-bottom: 3px solid #000; 
 }
 
@@ -399,7 +400,7 @@ footer {
 
 /* Estiliza a lista de "Tecnologias Utilizadas" */
 .content-box ul {
-    list-style-type: square; /* Marcadores quadrados */
+    list-style-type: square;
     padding-left: 30px;
     margin-top: 15px;
 }
@@ -413,7 +414,7 @@ footer {
 
 
 /* ==============================================================
-   ESTILO DA PÁGINA DE REGIÕES (MODERNO, COM CARDS)
+   ESTILO DA PÁGINA DE REGIÕES (MODERNO, COM CARDS E IMAGENS)
    Sobrescreve o .content-box quando ele contém .region-info
 ==============================================================
 */
@@ -427,18 +428,18 @@ footer {
     background-color: transparent;
     border: none;
     box-shadow: none;
-    padding: 0;
+    padding: 0; /* Remove padding para cards preencherem */
     
     /* 2. Define o layout de grid para os cards */
     display: grid;
-    /* Cria colunas responsivas: no mínimo 280px,
-       e no máximo 320px, para não esticar demais. */
+    /* Colunas responsivas: no mínimo 280px, no máximo 320px.
+       Isso permite que os cards tenham um tamanho consistente. */
     grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
     gap: 25px; /* Espaço entre os cards */
-    max-width: 1100px; /* Permite mais espaço para o grid */
+    max-width: 1100px; /* Largura máxima para o grid */
 
-    /* 3. Centraliza os cards no container
-       (resolve o card "órfão" na última linha) */
+    /* 3. Centraliza os cards no container, 
+       incluindo a última linha se ela não estiver cheia. */
     justify-content: center;
 }
 
@@ -447,9 +448,9 @@ footer {
 */
 .content-box:has(.region-info) h2,
 .content-box:has(.region-info) > p:first-of-type {
-    grid-column: 1 / -1; /* Ocupa 100% da largura */
+    grid-column: 1 / -1; /* Ocupa 100% da largura do grid */
     text-align: center;
-    border-bottom: 3px solid #ccc; /* Borda mais suave */
+    border-bottom: 3px solid #ccc; /* Linha divisória mais suave */
 }
 
 .content-box:has(.region-info) > p:first-of-type {
@@ -457,43 +458,39 @@ footer {
     font-size: 1.1rem;
     color: #555;
     margin-bottom: 15px;
-    border-bottom: none; /* Remove a borda do parágrafo */
+    border-bottom: none; /* Remove borda inferior do parágrafo */
 }
 
 
-/* Estiliza CADA <article class="region-info">
-  para parecer um "card" moderno.
-*/
+/* Estiliza CADA <article class="region-info"> para ser um card */
 .region-info {
     background-color: #fff;
     border: 1px solid #f0f0f0;
     border-radius: 12px; /* Cantos arredondados */
-    /* Padding é zero para a imagem colar no topo */
-    padding: 0;
+    padding: 0; /* Padding zero para a imagem colar no topo */
     text-align: center;
-    /* Sombra suave, como na sua screenshot */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); /* Sombra suave */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    /* Garante que a imagem com cantos arredondados fique contida */
-    overflow: hidden;
+    overflow: hidden; /* Esconde partes da imagem se exceder o border-radius */
 }
 
 .region-info:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Efeito de "levantar" ao passar o mouse */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Estiliza a imagem que vai no topo do card */
+/* Estiliza a imagem que vai no topo de cada card */
 .region-info img {
     width: 100%;
     height: 160px; /* Altura fixa para todas as imagens */
     object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
     display: block; /* Remove qualquer espaço extra abaixo da imagem */
+    border-bottom: 1px solid #f0f0f0; /* Linha abaixo da imagem para separar */
 }
 
-/* Este é o <div> que contém o texto (H3 e P) dentro do card */
+/* Container para o conteúdo textual dentro do card (título e parágrafo) */
 .region-content {
-    padding: 25px 20px;
+    padding: 25px 20px; /* Adiciona o padding aqui, dentro do conteúdo */
 }
 
 /* Estiliza o TÍTULO do card (Kanto, Johto, etc.) */
@@ -504,11 +501,10 @@ footer {
     font-size: 1.4rem;
 }
 
-/* Estiliza o PARÁGRAFO de descrição dentro do card.
-   (Mais específico que o .content-box p padrão)
-*/
+/* Estiliza o PARÁGRAFO de descrição dentro do card */
 .content-box .region-content p {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: #333; /* Cor de texto padrão para o card */
+    color: #333;
 }
+
