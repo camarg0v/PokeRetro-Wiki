@@ -7,10 +7,10 @@ Criar um site temático para fãs de Pokémon, com páginas interligadas, mídia
 
 ## 📄 Páginas
 - index.html: Página inicial
-- curiosidades.html: Fatos interessantes
-- jogos.html: Jogos clássicos
-- pokemons.html: Lista de Pokémon famosos
-- contato.html: Formulário de contato
+- pokedex.html: listagem de pokemons
+- treinadores.html: lista de treinadores da região de kanto
+- regiões.html: informações como fauna e flora, de cada região
+- sobre.html: Formulário de contato, informações sobre o projeto e motivações
 
 ## ⚙ Tecnologias
 - HTML5  
