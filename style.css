@@ -352,3 +352,89 @@ footer {
   font-weight: 500;
   margin-top: 40px;
 }
+
+.content-box {
+    background-color: #fff; /* Fundo branco, igual aos containers do site */
+    border: 3px solid #000; /* Borda preta sólida e grossa */
+    padding: 20px;
+    width: 90%;
+    max-width: 800px; /* Limite de largura para legibilidade */
+    margin: 25px auto; /* Centraliza a caixa na 'main' */
+    
+    /* Importante para o visual retro: sem sombras ou bordas arredondadas */
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Estiliza os títulos principais dentro das caixas 
+  (ex: "Sobre o Projeto" e "Regiões do Mundo Pokémon")
+*/
+.content-box h2 {
+    font-size: 1.8rem; /* Tamanho da fonte (ajuste se necessário) */
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    /* Linha inferior para separar o título, como no site de referência */
+    border-bottom: 3px solid #000; 
+}
+
+/* Estiliza os subtítulos (ex: "Tecnologias Utilizadas" ou "Kanto (Geração I)") */
+.content-box h3 {
+    font-size: 1.4rem;
+    color: #333; /* Um pouco mais suave que o preto total */
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Estiliza os parágrafos de texto */
+.content-box p {
+    font-size: 1rem; /* Garante que a fonte pixelada tenha um tamanho legível */
+    line-height: 1.7; /* Espaçamento entre linhas para facilitar a leitura */
+    color: #222;
+}
+
+/* Estiliza a lista de "Tecnologias Utilizadas" na página do projeto */
+.content-box ul {
+    list-style-type: square; /* Marcadores quadrados, bem retro! */
+    padding-left: 30px;
+    margin-top: 15px;
+}
+
+.content-box li {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Estilos específicos para a página de Regiões (regioes.html)
+*/
+
+/* Estiliza cada <article class="region-info">
+  para separar as diferentes regiões.
+*/
+.region-info {
+    margin-top: 25px;
+    padding-top: 25px;
+    
+    /* Usamos uma borda pontilhada (dotted) que combina com a estética 8-bit */
+    border-top: 3px dotted #555;
+}
+
+/* Remove a borda superior do primeiro item (Kanto), 
+  pois ele não precisa de um separador acima dele.
+*/
+.region-info:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+/* Título de cada região (Kanto, Johto, etc.) */
+.region-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #000; /* Título da região em preto */
+    font-size: 1.5rem;
+}
