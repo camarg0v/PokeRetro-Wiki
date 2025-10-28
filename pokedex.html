@@ -1,4 +1,254 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pokémon World - Pokédex</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+:root{
+  --red:#e53935;
+  --bg:#f4f6f8;
+  --card-bg:#ffffff;
+  --muted:#6b7280;
+  --accent:#0b69ff;
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:#0f1724;
+  -webkit-font-smoothing:antialiased;
+  padding:0;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  background-color: var(--red);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+.site-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.site-header nav {
+  margin-top: 8px;
+}
+.site-header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 10px;
+  font-size: 15px;
+  transition: opacity 0.2s ease, text-decoration 0.2s ease;
+}
+.site-header nav a:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+/* ===== SEARCH BAR + CONTROLS ===== */
+.controls{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  padding:18px;
+  flex-wrap:wrap;
+}
+.search{
+  display:flex;
+  gap:8px;
+  background:white;
+  border:1px solid #ddd;
+  padding:8px 10px;
+  border-radius:10px;
+  align-items:center;
+  min-width:320px;
+}
+.search input{
+  border:0;
+  outline:none;
+  background:transparent;
+  color:#111;
+  width:320px;
+  font-size:14px;
+}
+.search .icon{ color:#888 }
+
+select, button{
+  padding:8px 12px;
+  border-radius:10px;
+  border:1px solid #ccc;
+  font-size:14px;
+  background:#fff;
+  cursor:pointer;
+}
+
+.btn-red{
+  background:var(--red);
+  color:#fff;
+  border:none;
+  font-weight:600;
+}
+
+/* ===== MAIN GRID ===== */
+.main{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px 60px;
+}
+.grid{
+  display:grid;
+  gap:18px;
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+}
+.card{
+  background:var(--card-bg);
+  border-radius:12px;
+  padding:14px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  box-shadow:0 6px 18px rgba(12,18,30,0.06);
+  transition:transform .12s ease, box-shadow .12s ease;
+  min-height:240px;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 36px rgba(12,18,30,0.12);
+}
+.card .thumb{
+  width:200px;
+  height:200px;
+  display:grid;
+  place-items:center;
+  margin-bottom:8px;
+}
+.card .thumb img{
+  width:170px;
+  height:170px;
+  image-rendering:pixelated;
+}
+.card h3{
+  margin:6px 0 4px;
+  font-size:15px;
+  color:#12345b;
+}
+.card .meta{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.6;
+  margin-top:6px;
+}
+.types{
+  display:flex;
+  gap:8px;
+  margin-top:8px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.type{
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  color:#fff;
+  font-weight:700;
+  text-transform:capitalize;
+  box-shadow:0 6px 12px rgba(12,18,30,0.06);
+}
+
+/* ===== TYPE COLORS ===== */
+.t-normal{background:#A8A878;color:#111}
+.t-fire{background:#F08030;}
+.t-water{background:#6890F0;}
+.t-electric{background:#F8D030;color:#111;}
+.t-grass{background:#78C850;}
+.t-ice{background:#98D8D8;color:#111;}
+.t-fighting{background:#C03028;}
+.t-poison{background:#A040A0;}
+.t-ground{background:#E0C068;color:#111;}
+.t-flying{background:#A890F0;color:#111;}
+.t-psychic{background:#F85888;}
+.t-bug{background:#A8B820;color:#111;}
+.t-rock{background:#B8A038;color:#111;}
+.t-ghost{background:#705898;}
+.t-dragon{background:#7038F8;}
+.t-dark{background:#705848;}
+.t-steel{background:#B8B8D0;color:#111;}
+.t-fairy{background:#EE99AC;color:#111;}
+
+/* ===== EMPTY STATE ===== */
+.empty{
+  text-align:center;
+  padding:36px 0;
+  color:var(--muted);
+  font-size:16px;
+}
+
+/* ===== PAGINATION ===== */
+.pagination{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  align-items:center;
+  margin-top:24px;
+}
+.page-btn{
+  padding:8px 14px;
+  border-radius:10px;
+  border:1px solid #ccc;
+  background:#fff;
+  cursor:pointer;
+}
+.page-info{ color:var(--muted); font-weight:600; }
+
+@media (max-width:640px){
+  .search input{ width:140px; }
+  .grid{ grid-template-columns: repeat(auto-fill,minmax(140px,1fr)); }
+  .card .thumb{ width:140px; height:140px }
+  .card .thumb img{ width:120px; height:120px }
+}
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Pokémon World</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="pokedex.html">Pokédex</a>
+      <a href="treinadores.html">Personagens</a>
+      <a href="regioes.html">Regiões</a>
+      <a href="projeto.html">Sobre o Projeto</a>
+    </nav>
+  </header>
+
+  <div class="controls">
+    <div class="search">
+      <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"/></svg>
+      <input id="searchInput" placeholder="Search Pokémon by name or number..." />
+    </div>
+
+    <select id="typeFilter" title="Filter by type">
+      <option value="">All types</option>
+    </select>
+
+    <button id="clearCache" class="btn-red">Clear Pokédex</button>
+  </div>
+
+  <main class="main">
+    <section id="grid" class="grid"></section>
+    <div id="empty" class="empty" style="display:none">No Pokémon found.</div>
+=======
 <!-- Declaração do tipo de documento HTML5 -->
 <html lang="pt-BR">
 <head>
@@ -51,21 +301,31 @@
 
     <!-- Área onde os cards dos Pokémon serão exibidos dinamicamente -->
     <div id="pokedex" class="pokedex"></div>
+>>>>>>> e04c1c00dd1d8411374d8a75a1aa69ebb6d2256b
 
     <!-- Controles de paginação (anterior e próximo) -->
     <div class="pagination">
-      <button id="prevPage">⟨ Anterior</button>
-      <span id="pageInfo"></span>
-      <button id="nextPage">Próximo ⟩</button>
+      <button id="prevPage" class="page-btn">« Previous</button>
+      <div id="pageInfo" class="page-info">Page 1 of 1</div>
+      <button id="nextPage" class="page-btn">Next »</button>
     </div>
   </main>
 
+<<<<<<< HEAD
+  <footer style="text-align:center;padding:20px;color:#888;">
+    © 2025 Pokémon World - Fan Project
+  </footer>
+
+  <!-- Script externo -->
+=======
   <!-- Rodapé da página -->
   <footer>
     <p>© 2025 Pokémon World - Projeto Estudantil</p>
   </footer>
 
   <!-- Script JavaScript que faz o carregamento e interação da Pokédex -->
+>>>>>>> e04c1c00dd1d8411374d8a75a1aa69ebb6d2256b
   <script src="script.js"></script>
+
 </body>
 </html>
